@@ -14,3 +14,68 @@
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 
 @media(max-width:760px){.day-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.day-tile{min-height:78px}.day-label{font-size:8px}.day-number{font-size:22px}.day-status{font-size:8px;letter-spacing:0}.theme-toggle,.mobile-settings{width:44px;height:44px}.topbar-actions{gap:3px}}
+
+/* Reading colors also apply to text that inherits its color from the page. */
+:root { color: var(--ink); background: var(--bg); --muted: #516277; }
+:root[data-theme=dark] { --muted: #b7c5d8; }
+.hero { min-height: 240px; }
+.hero-copy { max-width: 66%; }
+.hero-kicker { font-size: .8125rem; letter-spacing: .05em; }
+.hero h2 { overflow-wrap: anywhere; line-height: 1.4; }
+.hero p { color: #dceaff; font-size: .875rem; line-height: 1.7; }
+.hero-button { font-size: .9375rem; min-height: 48px; }
+.hero .book-art { pointer-events: none; }
+.prose p { max-width: 42em; font-size: 1.0625rem; line-height: 1.95; overflow-wrap: anywhere; }
+.choice, .explanation p, .key-point p { font-size: 1rem; line-height: 1.8; overflow-wrap: anywhere; }
+.choice.selected { border-color: var(--blue); }
+.day-tile:disabled { opacity: 1; }
+.article-top .eyebrow, .lesson-diagram figcaption, .key-point>span { font-size: .875rem; }
+.objectives>span, .objectives ul, .diagram-item>strong, .diagram-item>span:last-child { font-size: .9375rem; }
+.review-list h3, .result-breakdown summary { font-size: .9375rem; }
+.lesson-sources { margin-top: 20px; border-top: 1px solid var(--line); }
+.lesson-sources summary, .lesson-sources a { padding: 12px 0; font-size: .875rem; line-height: 1.65; }
+.lesson-sources summary { cursor: pointer; font-weight: 600; }
+.lesson-sources ul { margin: 0; padding-left: 1.2em; }
+.lesson-sources a { color: var(--blue); text-decoration: underline; display: inline-flex; align-items: center; gap: 6px; }
+
+@media (max-width: 760px) {
+  .main-content { padding-bottom: calc(96px + env(safe-area-inset-bottom)); }
+  .page-intro h1 { font-size: clamp(1.375rem, 5.9vw, 1.625rem); line-height: 1.45; }
+  .page-intro .muted { font-size: .875rem; line-height: 1.65; }
+  .page-intro .eyebrow, .section-heading .eyebrow { font-size: .6875rem; }
+  .hero { min-height: 0; padding: 23px 20px; }
+  .hero-copy { max-width: 100%; }
+  .hero h2 { font-size: 1.625rem; margin: 10px 0 6px; }
+  .hero p { font-size: .8125rem; }
+  .hero-button { margin-top: 16px; }
+  .hero .book-art { opacity: .18; width: 145px; height: 122px; right: -21px; top: auto; bottom: -10px; }
+  .hero-index { display: none; }
+  .stat-label, .stat-card p>span, .four .stat-label { font-size: .75rem; }
+  .stat-card p { flex-wrap: wrap; }
+  .stat-card p>span { white-space: nowrap; }
+  .section-heading h2 { font-size: 1.125rem; }
+  .home-main .small, .home-aside .small { font-size: .8125rem; }
+  .lesson-meta, .chapter-nav .lesson-meta, .progress-label, .day-status, .plan-note { font-size: .75rem; }
+  .plan-note { line-height: 1.6; }
+  .curriculum-details summary, .curriculum-list>div, .tip p, .sample-note { font-size: .8125rem; }
+  .bottom-nav a { min-height: 56px; font-size: .8125rem; font-weight: 600; }
+  .bottom-nav a.active { box-shadow: inset 0 -3px var(--blue); }
+  .button, .article-actions .button, .review-callout .secondary, .empty>.button, .explanation .text-button { font-size: .9375rem; }
+  .select-label { font-size: .8125rem; }
+  .select-label select { font-size: 1rem; }
+  .chapter-nav nav { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .chapter-nav nav>button { font-size: .875rem; line-height: 1.5; }
+  .chapter-number { flex-shrink: 0; }
+  .lesson-article { padding-inline: 18px; }
+  .article-actions .button { min-height: 48px; line-height: 1.4; }
+  .autosave-note, .quiz-actions>.small { font-size: .75rem; }
+  .question-title { font-size: 1.1875rem; line-height: 1.65; }
+  .choice { min-height: 60px; }
+  .choices { gap: 10px; }
+  .choice-letter { font-size: .8125rem; }
+  .quiz-top>.small, .tag, .lobby-tags .tag { font-size: .75rem; }
+  .quiz-lobby>.muted, .result-panel>.muted, .review-banner p, .empty>p { font-size: .875rem; }
+  .result-panel>.small, .review-list .small, .history-row .small, .footnote { font-size: .8125rem; }
+  .history-row, .history-row strong { font-size: .875rem; }
+  .history-header, .history-row .tag, .chart-value, .chart-column>.small { font-size: .75rem; }
+}

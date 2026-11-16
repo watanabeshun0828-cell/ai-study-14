@@ -5,6 +5,7 @@ export const courseSchema = z.object({
   schemaVersion: z.literal(1), id: nonempty, day: z.number().int().min(1).max(14),
   title: nonempty, subtitle: nonempty, minutes: z.number().int().positive(),
   objectives: z.array(nonempty).min(1),
+  sources: z.array(z.object({ title: nonempty, url: z.url({ protocol: /^https$/ }) })).min(1).optional(),
   sections: z.array(z.object({
     id: nonempty, title: nonempty, paragraphs: z.array(nonempty).min(1),
     keyPoint: nonempty,
