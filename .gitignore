@@ -1,0 +1,9 @@
+node_modules/
+dist/
+playwright-report/
+test-results/
+*.local
+.DS_Store
+*.tsbuildinfo
+
+/ChatGPT 画像 2026年11月15日 11_27_08.png
